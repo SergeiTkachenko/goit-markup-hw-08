@@ -5,6 +5,11 @@
 .header__wrapper {
   display: flex;
   align-items: center;
+
+  @include small-max {
+    margin-top: 16px;
+    margin-bottom: 16px;
+  }
 }
 
 .header__nav {
@@ -13,10 +18,14 @@
 }
 
 .header__pages {
-  list-style-type: none;
-  display: flex;
-  justify-content: left;
-  align-items: center;
+  display: none;
+
+  @include small-min {
+    list-style-type: none;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+  }
 }
 
 .header__item {
@@ -52,6 +61,11 @@
 
 .header__contact {
   margin-left: auto;
+  display: none;
+
+  @include small-min {
+    display: block;
+  }
 }
 
 .header__list {
