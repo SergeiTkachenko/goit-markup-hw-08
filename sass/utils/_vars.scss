@@ -1,0 +1,32 @@
+:root {
+  /* fonts */
+  --main-font: 'Roboto', sans-serif;
+  --secondary-font: 'Raleway', sans-serif;
+  /* text color */
+  --main-txt-cl: #757575;
+  --light-txt-cl: #ffffff;
+  --accent-txt-cl: #2196f3;
+  --title-txt-cl: #212121;
+  --footer-grey-txt-cl: #ffffff99;
+  --dark-txt-cl: #000;
+
+  --teem-socials-icon-cl: #afb1b8;
+  /* Background colors */
+  --hero-bg-cl: #c4c4c4;
+  --hero-bg-cl-overlay: rgba(47, 48, 58, 0.4);
+  --team-bg-cl: #f5f4fa;
+  --team-caerd-bg-cl: #fff;
+  --footer-bg-cl: #2f303a;
+  --footer-icon-bg-cl: rgba(255, 255, 255, 0.1);
+  --portfolio-overay: rgba(33, 150, 243, 0.9);
+  --what-we-do-bg: rgba(47, 48, 58, 0.8);
+
+  /* bnt */
+  --portfolio-btn-cl: #f5f4fa;
+  --portfolio-btn-hover-cl: #2196f3;
+  --header-border: #ececec;
+  --portfolio-card-border: #eee;
+}
+
+$tablet-width: 1599px;
+$mobile-width: 767px;
