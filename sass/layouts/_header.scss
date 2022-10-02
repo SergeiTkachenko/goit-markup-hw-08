@@ -6,7 +6,7 @@
   display: flex;
   align-items: center;
 
-  @include small-max {
+  @include medium-max {
     margin-top: 16px;
     margin-bottom: 16px;
   }
@@ -20,7 +20,7 @@
 .header__pages {
   display: none;
 
-  @include small-min {
+  @include medium-min {
     list-style-type: none;
     display: flex;
     justify-content: left;
@@ -63,7 +63,7 @@
   margin-left: auto;
   display: none;
 
-  @include small-min {
+  @include medium-min {
     display: block;
   }
 }
