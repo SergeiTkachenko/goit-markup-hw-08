@@ -121,6 +121,14 @@
 
   margin-bottom: 30px;
   gap: 8px;
+
+  font-size: 12px;
+  line-height: calc(14 / 12);
+
+  @include large-min {
+    font-size: 14px;
+    line-height: calc(24 / 14);
+  }
 }
 
 .subscription-form__mark {
@@ -162,8 +170,8 @@
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 400;
-  font-size: 14px;
-  line-height: 24px calc(24 / 14);
+  font-size: 12px;
+  line-height: calc(14 / 12);
 
   letter-spacing: 0.03em;
 
@@ -171,4 +179,9 @@
 
   border-bottom: 1px solid currentColor;
   line-height: 0.75;
+
+  @include large-min {
+    font-size: 14px;
+    line-height: calc(24 / 14);
+  }
 }
