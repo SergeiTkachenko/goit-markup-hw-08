@@ -1,6 +1,15 @@
 .portfolio-card {
   background: var(--team-caerd-bg-cl);
   transform: translateY(0);
+  width: 450px;
+
+  @include medium-min {
+    width: 354px;
+  }
+
+  @include large-min {
+    width: 370px;
+  }
 }
 
 .portfolio-card__link {

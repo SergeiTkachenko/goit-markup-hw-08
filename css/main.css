@@ -68,7 +68,6 @@ body {
 }
 
 .container {
-  max-width: 320px;
   margin-left: auto;
   margin-right: auto;
   padding-left: 15px;
@@ -296,12 +295,37 @@ button {
 }
 
 .footer__wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
+  text-align: center;
+}
+@media screen and (min-width: 1200px) {
+  .footer__wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .footer__tablet-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: 165px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer__tablet-wrapper {
+    gap: 0;
+  }
 }
 
 .footer__address {
@@ -344,6 +368,20 @@ button {
   color: var(--accent-txt-cl);
 }
 
+.footer__socials {
+  margin-top: 60px;
+}
+@media screen and (min-width: 768px) {
+  .footer__socials {
+    margin-top: 0;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer__socials {
+    margin-left: 70px;
+  }
+}
+
 .footer__title {
   margin-bottom: 20px;
   font-weight: 700;
@@ -353,24 +391,32 @@ button {
 }
 
 .footer__email {
+  margin-top: 60px;
   margin-left: auto;
 }
+@media screen and (min-width: 480px) {
+  .footer__email {
+    margin-bottom: 0;
+  }
+}
 
-.footer__email-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  text-align: center;
-  gap: 12px;
+@media screen and (min-width: 1200px) {
+  .footer__email-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+    gap: 12px;
+  }
 }
 
 .footer__email-input {
-  width: 358px;
   height: 50px;
   padding: 15px 16px;
+  margin-bottom: 20px;
   border: 1px solid var(--main-txt-cl);
   -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
           filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
@@ -388,6 +434,22 @@ button {
 }
 .footer__email-input:focus, .footer__email-input:hover {
   border-color: var(--accent-txt-cl);
+}
+@media screen and (max-width: 479px) {
+  .footer__email-input {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 480px) {
+  .footer__email-input {
+    width: 450px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer__email-input {
+    margin-bottom: 0;
+    max-width: 358px;
+  }
 }
 
 .hero {
@@ -465,6 +527,12 @@ button {
   gap: 30px;
 }
 
+@media screen and (max-width: 1199px) {
+  .what-we-do {
+    display: none;
+  }
+}
+
 .what-we-do__title {
   margin-bottom: 50px;
   font-weight: 700;
@@ -516,10 +584,16 @@ button {
 .team__title {
   margin-bottom: 50px;
   font-weight: 700;
-  font-size: 36px;
-  line-height: 1.1666666667;
+  font-size: 28px;
+  line-height: 1.1785714286;
   text-align: center;
   color: var(--title-txt-cl);
+}
+@media screen and (min-width: 1200px) {
+  .team__title {
+    font-size: 36px;
+    line-height: 1.1666666667;
+  }
 }
 
 .teem__list {
@@ -687,10 +761,6 @@ button {
   }
 }
 
-.socials {
-  margin-left: 70px;
-}
-
 .socials__list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -832,7 +902,17 @@ button {
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
-  width: 270px;
+  width: 450px;
+}
+@media screen and (min-width: 768px) {
+  .team-card {
+    width: 354px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .team-card {
+    width: 270px;
+  }
 }
 
 .team-card__wrapper {
@@ -859,6 +939,17 @@ button {
   background: var(--team-caerd-bg-cl);
   -webkit-transform: translateY(0);
           transform: translateY(0);
+  width: 450px;
+}
+@media screen and (min-width: 768px) {
+  .portfolio-card {
+    width: 354px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .portfolio-card {
+    width: 370px;
+  }
 }
 
 .portfolio-card__link {
