@@ -37,9 +37,7 @@
               ></li
             >
             <li class="header__item"
-              ><a class="header__menu-link" href="./contacts.html"
-                >Контакти</a
-              ></li
+              ><a class="header__menu-link" href="./index.html">Контакти</a></li
             >
           </ul>
         </nav>
@@ -168,34 +166,57 @@
           <ul class="what-we-do__list">
             <li class="what-we-do__img">
               <div class="what-we-do__wrapper">
-                <img
-                  src="./img/what_we_do/img1.jpg"
-                  alt="Десктопні додатки"
-                  width="370"
-                  height="294"
-                />
+                <picture>
+                  <source
+                    media="(min-width: 1200px)"
+                    srcset="
+                      ./img/what_we_do/img1_lg-@1x.jpg 1x,
+                      ./img/what_we_do/img1_lg-@2x.jpg 2x
+                    "
+                  />
+                  <img
+                    src="./img/what_we_do/img1_lg-@1x.jpg"
+                    alt="Десктопні додатки"
+                  />
+                </picture>
+
                 <p class="what-we-do__text">Десктопні додатки</p>
               </div>
             </li>
             <li class="what-we-do__img">
               <div class="what-we-do__wrapper">
-                <img
-                  src="./img/what_we_do/img2.jpg"
-                  alt="Мобільні додатки"
-                  width="370"
-                  height="294"
-                />
+                <picture>
+                  <source
+                    media="(min-width: 1200px)"
+                    srcset="
+                      ./img/what_we_do/img2_lg-@1x.jpg 1x,
+                      ./img/what_we_do/img2_lg-@2x.jpg 2x
+                    "
+                  />
+                  <img
+                    src="./img/what_we_do/img2_lg-@1x.jpg"
+                    alt="Мобільні додатки"
+                  />
+                </picture>
                 <p class="what-we-do__text">Мобільні додатки</p>
               </div>
             </li>
             <li class="what-we-do__img">
               <div class="what-we-do__wrapper">
-                <img
-                  src="./img/what_we_do/img3.jpg"
-                  alt="Дизайнерські рішення"
-                  width="370"
-                  height="294"
-                />
+                <picture>
+                  <source
+                    media="(min-width: 1200px)"
+                    srcset="
+                      ./img/what_we_do/img3_lg-@1x.jpg 1x,
+                      ./img/what_we_do/img3_lg-@2x.jpg 2x
+                    "
+                  />
+                  <img
+                    src="./img/what_we_do/img3_lg-@1x.jpg"
+                    alt="Дизайнерські рішення"
+                  />
+                </picture>
+
                 <p class="what-we-do__text">Дизайнерські рішення</p>
               </div>
             </li>
@@ -210,13 +231,35 @@
           <h2 class="team__title">Наша команда</h2>
           <ul class="teem__list">
             <li class="team-card">
-              <img
-                class="team-img"
-                src="./img/team/img1.jpg"
-                alt="чоловік з бородою у сорочці"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./img/team/img1_lg-@1x.jpg 1x,
+                    ./img/team/img1_lg-@2x.jpg 2x
+                  "
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./img/team/img1_md-@1x.jpg 1x,
+                    ./img/team/img1_md-@2x.jpg 2x
+                  "
+                />
+                <source
+                  media="(max-width: 767px)"
+                  srcset="
+                    ./img/team/img1_sm-@1x.jpg 1x,
+                    ./img/team/img1_sm-@2x.jpg 2x
+                  "
+                />
+                <img
+                  class="team-img"
+                  src="./img/team/img1_sm-@1x.jpg"
+                  alt="чоловік з бородою у сорочці"
+                />
+              </picture>
+
               <div class="team-card__wrapper">
                 <h3 class="team-card__name">Ігор Дем'яненко</h3>
                 <p class="team-card__profession">Product Designer</p>
@@ -285,13 +328,35 @@
               </div>
             </li>
             <li class="team-card">
-              <img
-                class="team-img"
-                src="./img/team/img2.jpg"
-                alt="жінка в окулярах"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./img/team/img2_lg-@1x.jpg 1x,
+                    ./img/team/img2_lg-@2x.jpg 2x
+                  "
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./img/team/img2_md-@1x.jpg 1x,
+                    ./img/team/img2_md-@2x.jpg 2x
+                  "
+                />
+                <source
+                  media="(max-width: 767px)"
+                  srcset="
+                    ./img/team/img2_sm-@1x.jpg 1x,
+                    ./img/team/img2_sm-@2x.jpg 2x
+                  "
+                />
+                <img
+                  class="team-img"
+                  src="./img/team/img2_sm-@1x.jpg"
+                  alt="жінка в окулярах"
+                />
+              </picture>
+
               <div class="team-card__wrapper">
                 <h3 class="team-card__name">Ольга Рєпіна</h3>
                 <p class="team-card__profession">Frontend Developer</p>
@@ -360,13 +425,35 @@
               </div>
             </li>
             <li class="team-card">
-              <img
-                class="team-img"
-                src="./img/team/img3.jpg"
-                alt="чоловік у сорочці"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./img/team/img3_lg-@1x.jpg 1x,
+                    ./img/team/img3_lg-@2x.jpg 2x
+                  "
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./img/team/img3_md-@1x.jpg 1x,
+                    ./img/team/img3_md-@2x.jpg 2x
+                  "
+                />
+                <source
+                  media="(max-width: 767px)"
+                  srcset="
+                    ./img/team/img3_sm-@1x.jpg 1x,
+                    ./img/team/img3_sm-@2x.jpg 2x
+                  "
+                />
+                <img
+                  class="team-img"
+                  src="./img/team/img3_sm-@1x.jpg"
+                  alt="чоловік у сорочці"
+                />
+              </picture>
+
               <div class="team-card__wrapper">
                 <h3 class="team-card__name">Микола Тарасов</h3>
                 <p class="team-card__profession">Marketing</p>
@@ -435,13 +522,35 @@
               </div>
             </li>
             <li class="team-card">
-              <img
-                class="team-img"
-                src="./img/team/img4.jpg"
-                alt="чоловік з бородою у футболці"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./img/team/img4_lg-@1x.jpg 1x,
+                    ./img/team/img4_lg-@2x.jpg 2x
+                  "
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./img/team/img4_md-@1x.jpg 1x,
+                    ./img/team/img4_md-@2x.jpg 2x
+                  "
+                />
+                <source
+                  media="(max-width: 767px)"
+                  srcset="
+                    ./img/team/img4_sm-@1x.jpg 1x,
+                    ./img/team/img4_sm-@2x.jpg 2x
+                  "
+                />
+                <img
+                  class="team-img"
+                  src="./img/team/img4_sm-@1x.jpg"
+                  alt="чоловік з бородою у футболці"
+                />
+              </picture>
+
               <div class="team-card__wrapper">
                 <h3 class="team-card__name">Михайло Єрмаков</h3>
                 <p class="team-card__profession">UI Designer</p>

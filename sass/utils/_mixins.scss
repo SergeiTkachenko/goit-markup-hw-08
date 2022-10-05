@@ -29,7 +29,7 @@
 }
 
 @mixin medium-only {
-  @media screen and (max-width: $medium-width-min) and (max-width: $large-width-max) {
+  @media screen and (min-width: $medium-width-min) and (max-width: $large-width-max) {
     @content;
   }
 }

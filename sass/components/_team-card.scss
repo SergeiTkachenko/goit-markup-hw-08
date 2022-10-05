@@ -5,8 +5,6 @@
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 
-  width: 450px;
-
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   &:hover,
@@ -15,14 +13,6 @@
       0px 10px 10px rgba(0, 0, 0, 0.06), 7px 10px 12px rgba(0, 0, 0, 0.16);
 
     animation: small-shake 1s;
-  }
-
-  @include medium-min {
-    width: 354px;
-  }
-
-  @include large-min {
-    width: 270px;
   }
 }
 
