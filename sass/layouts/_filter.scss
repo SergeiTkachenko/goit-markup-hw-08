@@ -4,9 +4,15 @@
   list-style-type: none;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-start;
 
   gap: 8px;
+  row-gap: 15px;
+
+  @include medium-min {
+    justify-content: center;
+    gap: 8px;
+  }
 }
 
 .filter__btn {

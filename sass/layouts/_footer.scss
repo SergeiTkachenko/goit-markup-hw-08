@@ -106,6 +106,10 @@
   @include small-min {
     margin-bottom: 0;
   }
+
+  @include large-min {
+    margin-top: 0px;
+  }
 }
 
 .footer__email-wrapper {

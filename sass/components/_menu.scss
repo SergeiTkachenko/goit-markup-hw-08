@@ -51,6 +51,7 @@
 }
 
 .mobile__link {
+  font-weight: 500;
   font-size: 40px;
   line-height: calc(47 / 50);
   letter-spacing: 0.02em;
@@ -86,7 +87,8 @@
 }
 
 .mobile__phone {
-  font-size: 32px;
+  font-weight: 500;
+  font-size: 30px;
   line-height: calc(40 / 34);
 
   letter-spacing: 0.02em;
@@ -95,6 +97,7 @@
 }
 
 .mobile__email {
+  font-weight: 500;
   font-size: 24px;
   line-height: calc(28 / 24);
   letter-spacing: 0.02em;
@@ -127,6 +130,7 @@
 }
 
 .mobile__socials-link {
+  font-weight: 500;
   font-size: 18px;
   line-height: calc(22 / 18);
   letter-spacing: 0.02em;
