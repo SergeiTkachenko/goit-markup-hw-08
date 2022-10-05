@@ -17,6 +17,21 @@
 
 .what-we-do__wrapper {
   position: relative;
+
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover .what-we-do__text,
+  &:focus .what-we-do__text {
+    font-size: 18px;
+    color: var(--accent-txt-cl);
+  }
+
+  &:hover,
+  &:focus {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 10px 10px var(--accent-txt-cl);
+  }
 }
 
 .what-we-do__list {
@@ -45,4 +60,7 @@
 
   color: var(--light-txt-cl);
   background: var(--what-we-do-bg);
+
+  transition: font-size 250ms cubic-bezier(0.4, 0, 0.2, 1) 250ms,
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1) 250ms;
 }
