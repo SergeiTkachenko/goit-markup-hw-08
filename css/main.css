@@ -710,7 +710,7 @@ button {
 }
 
 .filter {
-  margin-bottom: 50px;
+  margin-bottom: 40px;
   list-style-type: none;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -725,6 +725,16 @@ button {
 }
 @media screen and (min-width: 768px) {
   .filter {
+    margin-bottom: 30px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: 8px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .filter {
+    margin-bottom: 50px;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
