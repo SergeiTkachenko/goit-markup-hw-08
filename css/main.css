@@ -765,6 +765,8 @@ button {
   background-color: var(--portfolio-btn-hover-cl);
   -webkit-box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
           box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+  -webkit-animation: small-shake 1s;
+          animation: small-shake 1s;
 }
 
 .portfolio__list {
@@ -994,20 +996,9 @@ button {
           box-shadow: 0px 5px 5px rgba(29, 72, 190, 0.15);
 }
 
-@media screen and (min-width: 480px) {
-  .benefits__card {
-    width: 450px;
-  }
-}
-@media screen and (min-width: 768px) {
-  .benefits__card {
-    width: 354px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .benefits__card {
-    width: 270px;
-  }
+.benefits__wrapper-content {
+  margin: 0;
+  padding: 0;
 }
 
 .benefits__icon {
@@ -1022,12 +1013,13 @@ button {
           align-items: center;
   width: 100%;
   height: 120px;
-  margin-bottom: 30px;
   background-color: var(--team-bg-cl);
   border-radius: 4px;
 }
 
 .benefits__title {
+  padding-left: 4px;
+  padding-top: 30px;
   margin-bottom: 10px;
   font-weight: 700;
   font-size: 14px;
@@ -1043,7 +1035,66 @@ button {
 }
 
 .benefits__content {
+  padding-left: 4px;
   line-height: 1.7142857143;
+  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.benefits__card {
+  position: relative;
+  -webkit-transition: border-radius 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1) 250ms, -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-radius 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1) 250ms, -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1) 250ms, border-radius 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1) 250ms, border-radius 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1) 250ms, -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media screen and (min-width: 480px) {
+  .benefits__card {
+    width: 450px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .benefits__card {
+    width: 354px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .benefits__card {
+    width: 270px;
+  }
+}
+.benefits__card:hover, .benefits__card:focus {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  border-radius: 4px;
+  -webkit-box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+          box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+.benefits__card:hover .benefits__icon, .benefits__card:focus .benefits__icon {
+  background-color: transparent;
+}
+.benefits__card:hover .benefits__content, .benefits__card:focus .benefits__content {
+  color: var(--title-txt-cl);
+}
+.benefits__card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(35%, var(--team-bg-cl)), to(var(--accent-txt-cl)));
+  background: linear-gradient(var(--team-bg-cl) 35%, var(--accent-txt-cl));
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 200ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 200ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: -1;
+  border-radius: 4px;
+}
+.benefits__card:hover::after, .benefits__card:focus::after {
+  opacity: 1;
+  visibility: visible;
 }
 
 .team-card {
@@ -1057,8 +1108,8 @@ button {
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .team-card:hover, .team-card:focus {
-  -webkit-box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.12), 0px 10px 10px rgba(0, 0, 0, 0.06), 7px 10px 12px rgba(0, 0, 0, 0.16);
-          box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.12), 0px 10px 10px rgba(0, 0, 0, 0.06), 7px 10px 12px rgba(0, 0, 0, 0.16);
+  -webkit-box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+          box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
   -webkit-animation: small-shake 1s;
           animation: small-shake 1s;
 }
@@ -1161,8 +1212,8 @@ button {
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .portfolio-card__link:hover, .portfolio-card__link:focus {
-  -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
-          box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+  -webkit-box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+          box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .portfolio-card__link {

@@ -9,8 +9,7 @@
 
   &:hover,
   &:focus {
-    box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.12),
-      0px 10px 10px rgba(0, 0, 0, 0.06), 7px 10px 12px rgba(0, 0, 0, 0.16);
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
 
     animation: small-shake 1s;
   }
